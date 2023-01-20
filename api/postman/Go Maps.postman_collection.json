@@ -1,0 +1,811 @@
+{
+	"info": {
+		"_postman_id": "e9e5e86d-96fc-4b69-9280-4a0794b2af75",
+		"name": "Go Maps",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4477506"
+	},
+	"item": [
+		{
+			"name": "Rochdale",
+			"item": [
+				{
+					"name": "Rochdale Centre 1x Zoom 600x600",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Location\": {\n        \"Type\": \"OSGB36\",\n        \"LatLon\": {\n            \"Lat\": 389721,\n            \"Lon\": 413215\n        }\n    },\n    \"TileWidth\": 600,\n    \"TileHeight\": 600,\n    \"Zoom\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Rochdale Centre 1.2x Zoom 600x600",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Location\": {\n        \"Type\": \"OSGB36\",\n        \"LatLon\": {\n            \"Lat\": 389721,\n            \"Lon\": 413215 \n        }\n    },\n    \"TileWidth\": 600,\n    \"TileHeight\": 600,\n    \"Zoom\": 1.2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Rochdale Road Lines 1.2x Zoom  600x600",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Location\": {\n        \"Type\": \"OSGB36\",\n        \"LatLon\": {\n            \"Lat\": 389721,\n            \"Lon\": 413215 \n        }\n    },\n    \"TileWidth\": 600,\n    \"TileHeight\": 600,\n    \"Zoom\": 1.2,\n    \"Layers\": [\n        \"road\"\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Rochdale Centre 5x Zoom 600x600",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Location\": {\n        \"Type\": \"OSGB36\",\n        \"LatLon\": {\n            \"Lat\": 389721,\n            \"Lon\": 413215 \n        }\n    },\n    \"TileWidth\": 600,\n    \"TileHeight\": 600,\n    \"Zoom\": 5\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Rochdale Centre 1x Zoom 1080x1080",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Location\": {\n        \"Type\": \"OSGB36\",\n        \"LatLon\": {\n            \"Lat\": 389721,\n            \"Lon\": 413215 \n        }\n    },\n    \"TileWidth\": 1080,\n    \"TileHeight\": 1080\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Rochdale Centre 1x Zoom 1920x1080",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Location\": {\n        \"Type\": \"OSGB36\",\n        \"LatLon\": {\n            \"Lat\": 389721,\n            \"Lon\": 413215 \n        }\n    },\n    \"TileWidth\": 1920,\n    \"TileHeight\": 1080\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Rochdale Centre 2x Zoom 1920x1080",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Location\": {\n        \"Type\": \"OSGB36\",\n        \"LatLon\": {\n            \"Lat\": 389721,\n            \"Lon\": 413215 \n        }\n    },\n    \"TileWidth\": 1920,\n    \"TileHeight\": 1080,\n    \"Zoom\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Rochdale Centre 0.5x Zoom 1920x1080",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Location\": {\n        \"Type\": \"OSGB36\",\n        \"LatLon\": {\n            \"Lat\": 389721,\n            \"Lon\": 413215 \n        }\n    },\n    \"TileWidth\": 1920,\n    \"TileHeight\": 1080,\n    \"Zoom\": 0.5\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080"
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Heywood",
+			"item": [
+				{
+					"name": "Heywood 1x Zoom 600x600",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Location\": {\n        \"Type\": \"OSGB36\",\n        \"LatLon\": {\n            \"Lat\": 384342,\n            \"Lon\": 409456 \n        }\n    },\n    \"TileWidth\": 600,\n    \"TileHeight\": 600,\n    \"Zoom\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080"
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Torquay",
+			"item": [
+				{
+					"name": "Torquay Centre 1x Zoom 600x600",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Location\": {\n        \"Type\": \"OSGB36\",\n        \"LatLon\": {\n            \"Lat\": 290551,\n            \"Lon\": 63516\n        }\n    },\n    \"TileWidth\": 600,\n    \"TileHeight\": 600,\n    \"Zoom\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Torquay Rail Stn 10x Zoom 600x600",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Location\": {\n        \"Type\": \"OSGB36\",\n        \"LatLon\": {\n            \"Lat\": 290551.46,\n            \"Lon\": 63516.86 \n        }\n    },\n    \"TileWidth\": 600,\n    \"TileHeight\": 600,\n    \"Zoom\": 10,\n    \"Layers\": [\n        \"railway_station\"\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080"
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Other",
+			"item": [
+				{
+					"name": "Cherry Blossom Farm 10x Zoom 600x600",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Location\": {\n        \"Type\": \"OSGB36\",\n        \"LatLon\": {\n            \"Lat\": 291224,\n            \"Lon\": 68245 \n        }\n    },\n    \"TileWidth\": 600,\n    \"TileHeight\": 600,\n    \"Zoom\": 10\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Image Format Jpg",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Format\": \"jpg\",\n    \"Location\": {\n        \"Type\": \"OSGB36\",\n        \"LatLon\": {\n            \"Lat\": 389721,\n            \"Lon\": 413215\n        }\n    },\n    \"TileWidth\": 600,\n    \"TileHeight\": 600,\n    \"Zoom\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Image Format Png",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Format\": \"png\",\n    \"Location\": {\n        \"Type\": \"OSGB36\",\n        \"LatLon\": {\n            \"Lat\": 389721,\n            \"Lon\": 413215\n        }\n    },\n    \"TileWidth\": 600,\n    \"TileHeight\": 600,\n    \"Zoom\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Height Point 10x Zoom 600x600",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Location\": {\n        \"Type\": \"OSGB36\",\n        \"LatLon\": {\n            \"Lat\": 291224,\n            \"Lon\": 68045 \n        }\n    },\n    \"TileWidth\": 600,\n    \"TileHeight\": 600,\n    \"Zoom\": 10,\n    \"Layers\": [\n        \"spot_height\"\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pilsworth Road 5x Zoom 600x600",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Location\": {\n        \"Type\": \"OSGB36\",\n        \"LatLon\": {\n            \"Lat\": 384342,\n            \"Lon\": 409456 \n        }\n    },\n    \"TileWidth\": 600,\n    \"TileHeight\": 600,\n    \"Zoom\": 5\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mellor Street 18x Zoom 600x600",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Location\": {\n        \"Type\": \"OSGB36\",\n        \"LatLon\": {\n            \"Lat\": 388888,\n            \"Lon\": 413242\n        }\n    },\n    \"TileWidth\": 600,\n    \"TileHeight\": 600,\n    \"Zoom\": 18\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Healey Dell 7x Zoom 600x600",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Location\": {\n        \"Type\": \"OSGB36\",\n        \"LatLon\": {\n            \"Lat\": 388200,\n            \"Lon\": 416000\n        }\n    },\n    \"TileWidth\": 600,\n    \"TileHeight\": 600,\n    \"Zoom\": 7,\n    \"Layers\": [\n        \"named_place\",\n        \"road\"\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080"
+						},
+						"description": "Healey Dell 7x Zoom"
+					},
+					"response": []
+				},
+				{
+					"name": "Paignton Centre 5x Zoom 600x600",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Location\": {\n        \"Type\": \"OSGB36\",\n        \"LatLon\": {\n            \"Lat\": 288958,\n            \"Lon\": 60750\n        }\n    },\n    \"TileWidth\": 600,\n    \"TileHeight\": 600,\n    \"Zoom\": 5\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mellor Street 5x Zoom 600x600",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Location\": {\n        \"Type\": \"OSGB36\",\n        \"LatLon\": {\n            \"Lat\": 388889,\n            \"Lon\": 413243\n        }\n    },\n    \"TileWidth\": 600,\n    \"TileHeight\": 600,\n    \"Zoom\": 5\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "M26 J21 2x Zoom 600 x 600",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Location\": {\n        \"Type\": \"OSGB36\",\n        \"LatLon\": {\n            \"Lat\": 392648.96,\n            \"Lon\": 411628.48 \n        }\n    },\n    \"TileWidth\": 600,\n    \"TileHeight\": 600,\n    \"Zoom\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Rose Hill Cottage 2x Zoom 600 x 600",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Location\": {\n        \"Type\": \"OSGB36\",\n        \"LatLon\": {\n            \"Lat\": 393908.96,\n            \"Lon\": 411100.48 \n\n        }\n    },\n    \"TileWidth\": 600,\n    \"TileHeight\": 600,\n    \"Zoom\": 8\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cromer 1x Zoom 600x600",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Location\": {\n        \"Type\": \"OSGB36\",\n        \"LatLon\": {\n            \"Lat\": 622000,\n            \"Lon\": 340500\n        }\n    },\n    \"TileWidth\": 600,\n    \"TileHeight\": 600,\n    \"Zoom\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Invalid Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080"
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "NationalGrid",
+			"item": [
+				{
+					"name": "SD",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Location\": {\n        \"Type\": \"NATIONALGRID\",\n        \"GridRef\": \"SD\"\n    },\n    \"TileWidth\": 600,\n    \"TileHeight\": 600,\n    \"Layers\": [\n        \"all\"\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SD91",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Location\": {\n        \"Type\": \"NATIONALGRID\",\n        \"GridRef\": \"SD91\"\n    },\n    \"TileWidth\": 600,\n    \"TileHeight\": 600,\n    \"Layers\": [\n        \"all\"\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SD91SW",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Location\": {\n        \"Type\": \"NATIONALGRID\",\n        \"GridRef\": \"SD91SW\"\n    },\n    \"TileWidth\": 600,\n    \"TileHeight\": 600,\n    \"Layers\": [\n        \"all\"\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SD91SE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Location\": {\n        \"Type\": \"NATIONALGRID\",\n        \"GridRef\": \"SD91SE\"\n    },\n    \"TileWidth\": 600,\n    \"TileHeight\": 600,\n    \"Layers\": [\n        \"all\"\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SD91NW",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Location\": {\n        \"Type\": \"NATIONALGRID\",\n        \"GridRef\": \"SD91NW\"\n    },\n    \"TileWidth\": 600,\n    \"TileHeight\": 600,\n    \"Layers\": [\n        \"all\"\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SD91NE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Location\": {\n        \"Type\": \"NATIONALGRID\",\n        \"GridRef\": \"SD91NE\"\n    },\n    \"TileWidth\": 600,\n    \"TileHeight\": 600,\n    \"Layers\": [\n        \"all\"\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TG05",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Location\": {\n        \"Type\": \"NATIONALGRID\",\n        \"GridRef\": \"SD91NE\"\n    },\n    \"TileWidth\": 600,\n    \"TileHeight\": 600,\n    \"Layers\": [\n        \"all\"\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080"
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
