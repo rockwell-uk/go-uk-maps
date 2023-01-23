@@ -7,8 +7,8 @@ import (
 
 	"github.com/llgcode/draw2d/draw2dimg"
 	"github.com/rockwell-uk/go-geom/geom"
-	"github.com/rockwell-uk/go-geos"
 	"github.com/rockwell-uk/go-logger/logger"
+	"github.com/twpayne/go-geos"
 )
 
 func drawLayerGeometries(gc *draw2dimg.GraphicContext, mg types.MapLayerGeometries, scale func(x, y float64) (float64, float64)) error {
@@ -55,22 +55,22 @@ func DrawGeom(gc *draw2dimg.GraphicContext, mg types.MapGeom, scale func(x, y fl
 				fmt.Sprintf("type %+v [%+v] %+v %+v\n", _type, mg.DataType, mg.FillCol, mg.Thickness),
 			)
 			switch _type {
-			case geos.PointTypeID:
+			case geos.TypeIDPoint:
 				err := geom.DrawPoint(gc, g, mg.Radius, mg.FillCol, mg.Thickness, mg.LineCol, scale)
 				if err != nil {
 					return err
 				}
-			case geos.LineStringTypeID, geos.LinearRingTypeID:
+			case geos.TypeIDLineString, geos.TypeIDLinearRing:
 				err := geom.DrawLine(gc, g, mg.Thickness, mg.FillCol, mg.StrokeWidth, mg.LineCol, scale)
 				if err != nil {
 					return err
 				}
-			case geos.PolygonTypeID:
+			case geos.TypeIDPolygon:
 				err := geom.DrawPolygon(gc, g, mg.FillCol, mg.LineCol, mg.Thickness, scale)
 				if err != nil {
 					return err
 				}
-			case geos.MultiPointTypeID, geos.MultiLineStringTypeID, geos.MultiPolygonTypeID, geos.GeometryCollectionTypeID:
+			case geos.TypeIDMultiPoint, geos.TypeIDMultiLineString, geos.TypeIDMultiPolygon, geos.TypeIDGeometryCollection:
 				n := g.NumGeometries()
 				var subgeoms []*geos.Geom
 				for i := 0; i < n; i++ {

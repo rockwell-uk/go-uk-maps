@@ -9,7 +9,7 @@ import (
 
 	"go-uk-maps/makeimage/types"
 
-	"github.com/rockwell-uk/go-geos"
+	"github.com/twpayne/go-geos"
 
 	"golang.org/x/image/draw"
 )
@@ -71,13 +71,13 @@ func prepareGeom(m draw.Image, l *types.ImageLayer, assetsAdded types.AssetsAdde
 		}
 
 		switch gtype {
-		case geos.PointTypeID:
+		case geos.TypeIDPoint:
 			l.Geometries.Points[dataType] = append(l.Geometries.Points[dataType], mg)
-		case geos.LineStringTypeID, geos.LinearRingTypeID:
+		case geos.TypeIDLineString, geos.TypeIDLinearRing:
 			l.Geometries.Lines[dataType] = append(l.Geometries.Lines[dataType], mg)
-		case geos.PolygonTypeID:
+		case geos.TypeIDPolygon:
 			l.Geometries.Polygons[dataType] = append(l.Geometries.Polygons[dataType], mg)
-		case geos.MultiPointTypeID, geos.MultiLineStringTypeID, geos.MultiPolygonTypeID, geos.GeometryCollectionTypeID:
+		case geos.TypeIDMultiPoint, geos.TypeIDMultiLineString, geos.TypeIDMultiPolygon, geos.TypeIDGeometryCollection:
 			l.Geometries.Multi[dataType] = append(l.Geometries.Multi[dataType], mg)
 		default:
 			return map[types.FeatCode]map[types.LabelType]map[string]types.ImageAsset{}, fmt.Errorf("unknown geometry type %v", gtype)

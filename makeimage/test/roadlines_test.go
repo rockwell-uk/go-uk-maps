@@ -15,8 +15,8 @@ import (
 	"go-uk-maps/makeimage/types"
 
 	"github.com/rockwell-uk/go-geom/geom"
-	"github.com/rockwell-uk/go-geos"
 	"github.com/rockwell-uk/go-text/fonts"
+	"github.com/twpayne/go-geos"
 
 	"github.com/llgcode/draw2d"
 	"github.com/llgcode/draw2d/draw2dimg"
@@ -159,7 +159,7 @@ func TestLineTest(t *testing.T) {
 			ID:         strconv.Itoa(id),
 			LayerType:  "lines_test",
 			FeatCode:   featCode,
-			GeomType:   geos.LineStringTypeID,
+			GeomType:   geos.TypeIDLineString,
 			ShapeType:  shapeType,
 			RenderType: renderType,
 			LabelFieldNames: []string{

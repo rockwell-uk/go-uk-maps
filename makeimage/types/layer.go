@@ -3,7 +3,7 @@ package types
 import (
 	"image/color"
 
-	"github.com/rockwell-uk/go-geos"
+	"github.com/twpayne/go-geos"
 )
 
 type LabelType int
@@ -25,7 +25,7 @@ type LayerArtifact struct {
 	ID                      string
 	LayerType               string
 	FeatCode                FeatCode
-	GeomType                geos.GeometryTypeID
+	GeomType                geos.TypeID
 	Geometry                *geos.Geom
 	ShapeType               ShapeType
 	RenderType              RenderType

@@ -7,9 +7,9 @@ import (
 	"strings"
 
 	"github.com/rockwell-uk/go-geom/geom"
-	"github.com/rockwell-uk/go-geos"
 	"github.com/rockwell-uk/go-text/fonts"
 	"github.com/rockwell-uk/go-text/text"
+	"github.com/twpayne/go-geos"
 
 	"github.com/llgcode/draw2d/draw2dimg"
 )
