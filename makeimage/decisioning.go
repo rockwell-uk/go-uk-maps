@@ -8,9 +8,9 @@ import (
 	"go-uk-maps/makeimage/types"
 
 	"github.com/rockwell-uk/go-geom/geom"
-	"github.com/rockwell-uk/go-geos"
 	"github.com/rockwell-uk/go-logger/logger"
 	"github.com/rockwell-uk/go-text/text"
+	"github.com/twpayne/go-geos"
 )
 
 const (

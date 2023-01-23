@@ -8,8 +8,8 @@ import (
 	"go-uk-maps/colours"
 	"go-uk-maps/makeimage/types"
 
-	"github.com/rockwell-uk/go-geos"
 	"github.com/rockwell-uk/go-text/fonts"
+	"github.com/twpayne/go-geos"
 
 	"github.com/llgcode/draw2d"
 	"github.com/llgcode/draw2d/draw2dimg"

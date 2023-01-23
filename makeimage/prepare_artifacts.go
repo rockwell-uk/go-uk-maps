@@ -7,7 +7,7 @@ import (
 	"go-uk-maps/makeimage/types"
 
 	"github.com/llgcode/draw2d/draw2dimg"
-	"github.com/rockwell-uk/go-geos"
+	"github.com/twpayne/go-geos"
 
 	"golang.org/x/image/draw"
 )
@@ -43,7 +43,7 @@ func prepareLayerArtifacts(gc *draw2dimg.GraphicContext, m draw.Image, l *types.
 
 func artifactFromLayerData(l *types.ImageLayer, ld layerdata.LayerData) (types.LayerArtifact, error) {
 
-	var geomType geos.GeometryTypeID
+	var geomType geos.TypeID
 
 	geom, err := gctx.NewGeomFromWKT(ld.WKT.String)
 	if err != nil {

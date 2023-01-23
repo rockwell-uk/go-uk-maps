@@ -13,8 +13,8 @@ import (
 
 	"github.com/llgcode/draw2d/draw2dimg"
 	"github.com/rockwell-uk/go-geom/geom"
-	"github.com/rockwell-uk/go-geos"
 	"github.com/rockwell-uk/go-nationalgrid"
+	"github.com/twpayne/go-geos"
 )
 
 func TestIsInViewPolygonsMix(t *testing.T) {
@@ -196,7 +196,7 @@ func drawImage(name string, a, b *geos.Geom) error {
 
 	_type := b.TypeID()
 
-	if _type == geos.LineStringTypeID {
+	if _type == geos.TypeIDLineString {
 		err = geom.DrawLine(gc, a, thickness, fillColor, strokeWidth, strokeColor, scale)
 		if err != nil {
 			return err
@@ -206,7 +206,7 @@ func drawImage(name string, a, b *geos.Geom) error {
 			return err
 		}
 	}
-	if _type == geos.PolygonTypeID {
+	if _type == geos.TypeIDPolygon {
 		err = geom.DrawPolygon(gc, a, fillColor, strokeColor, strokeWidth, scale)
 		if err != nil {
 			return err

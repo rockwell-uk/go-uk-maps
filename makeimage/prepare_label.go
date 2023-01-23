@@ -3,8 +3,8 @@ package makeimage
 import (
 	"go-uk-maps/makeimage/types"
 
-	"github.com/rockwell-uk/go-geos"
 	"github.com/rockwell-uk/go-text/fonts"
+	"github.com/twpayne/go-geos"
 
 	"github.com/llgcode/draw2d/draw2dimg"
 )
@@ -59,7 +59,7 @@ func prepareLabel(gc *draw2dimg.GraphicContext, l *types.ImageLayer, a types.Lay
 		ShouldSplitFn: types.ShouldSplit,
 	}
 
-	if _type == geos.PointTypeID {
+	if _type == geos.TypeIDPoint {
 
 		// first element of LabelText is DISTNAME
 		label, err := GetLabelText(a.LabelText, a.LabelFieldNames[0])
@@ -104,7 +104,7 @@ func prepareLabel(gc *draw2dimg.GraphicContext, l *types.ImageLayer, a types.Lay
 		}
 	}
 
-	if _type == geos.MultiLineStringTypeID || _type == geos.LineStringTypeID {
+	if _type == geos.TypeIDMultiLineString || _type == geos.TypeIDLineString {
 
 		if dataType == types.LINE {
 

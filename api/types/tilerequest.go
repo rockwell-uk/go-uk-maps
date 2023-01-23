@@ -4,8 +4,8 @@ import (
 	"reflect"
 
 	"github.com/rockwell-uk/go-geom/geom"
-	"github.com/rockwell-uk/go-geos"
 	"github.com/rockwell-uk/go-nationalgrid"
+	"github.com/twpayne/go-geos"
 )
 
 type TileRequest struct {

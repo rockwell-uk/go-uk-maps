@@ -9,10 +9,10 @@ import (
 	"go-uk-maps/api/types"
 	"go-uk-maps/database"
 
-	"github.com/rockwell-uk/go-geos"
 	"github.com/rockwell-uk/go-logger/logger"
 	"github.com/rockwell-uk/go-nationalgrid"
 	"github.com/rockwell-uk/go-utils/sliceutils"
+	"github.com/twpayne/go-geos"
 )
 
 var (

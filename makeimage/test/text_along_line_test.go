@@ -106,11 +106,7 @@ func TestGetLineData(t *testing.T) {
 			t.Fatal(err)
 		}
 
-		scaledLineCoords, err := text.GetMultiLineStringCoords(tl)
-		if err != nil {
-			t.Fatal(err)
-		}
-		scaled := text.GetLineData(scaledLineCoords)
+		scaled := text.GetLineData(*geom.GetPoints(tl))
 
 		// set the origin to the same point as the blue and green line start from
 		origin := []float64{
