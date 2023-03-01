@@ -14,7 +14,7 @@ require (
 	github.com/rockwell-uk/go-text v0.0.0-20230123194145-3c8beadd6d47
 	github.com/rockwell-uk/go-utils v0.0.0-20230120103952-f9b372a60411
 	github.com/twpayne/go-geos v0.8.0
-	golang.org/x/image v0.3.0
+	golang.org/x/image v0.5.0
 )
 
 require (
