@@ -1,0 +1,24 @@
+package types
+
+//go:generate stringer -type=DataType
+
+type DataType int
+
+const (
+	NO_LABEL DataType = iota
+	SITE
+	POINT
+	LINE // boundary or road
+	JUNCTION
+	CARTOGRAPHIC
+	EDUCATION_SCHOOL
+	POLICE_STATION
+	HOSPITAL
+	LEISURE_CENTRE
+	AIRPORT
+	PLACE_OF_WORSHIP
+	EDUCATION_HIGHER
+	WATER_TRANSPORT
+	ROAD_TRANSPORT
+	ROAD_SERVICES
+)
