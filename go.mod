@@ -13,7 +13,7 @@ require (
 	github.com/rockwell-uk/go-nationalgrid v1.0.0
 	github.com/rockwell-uk/go-text v1.0.0
 	github.com/rockwell-uk/go-utils v1.0.0
-	github.com/twpayne/go-geos v0.13.1
+	github.com/twpayne/go-geos v0.13.2
 	golang.org/x/image v0.6.0
 )
 
