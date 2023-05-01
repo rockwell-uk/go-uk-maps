@@ -3,7 +3,7 @@ module go-uk-maps
 go 1.18
 
 require (
-	github.com/go-sql-driver/mysql v1.7.0
+	github.com/go-sql-driver/mysql v1.7.1
 	github.com/jmoiron/sqlx v1.3.5
 	github.com/lib/pq v1.10.7
 	github.com/llgcode/draw2d v0.0.0-20210904075650-80aa0a2a901d
