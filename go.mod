@@ -7,7 +7,7 @@ require (
 	github.com/jmoiron/sqlx v1.3.5
 	github.com/lib/pq v1.10.7
 	github.com/llgcode/draw2d v0.0.0-20210904075650-80aa0a2a901d
-	github.com/mattn/go-sqlite3 v1.14.16
+	github.com/mattn/go-sqlite3 v1.14.17
 	github.com/rockwell-uk/go-geos-draw v1.0.0
 	github.com/rockwell-uk/go-logger v1.0.0
 	github.com/rockwell-uk/go-nationalgrid v1.0.0
