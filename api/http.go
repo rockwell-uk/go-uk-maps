@@ -48,7 +48,16 @@ func getMux() *http.ServeMux {
 
 	// Favicon
 	mux.Handle("/favicon.ico", http.HandlerFunc(faviconHandler))
-	mux.Handle("/", http.HandlerFunc(tileHandler))
+	mux.Handle("/", http.HandlerFunc(requestHandler))
 
 	return mux
+}
+
+func requestHandler(w http.ResponseWriter, r *http.Request) {
+	switch r.Method {
+	case http.MethodGet:
+		getHandler(w, r)
+	case http.MethodPost:
+		postHandler(w, r)
+	}
 }

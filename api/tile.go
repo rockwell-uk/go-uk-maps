@@ -19,21 +19,28 @@ import (
 	"go-uk-maps/makeimage"
 )
 
-func tileHandler(w http.ResponseWriter, r *http.Request) {
-	var tileRequest types.TileRequest
+func makeTile(db database.StorageEngine, r types.TileRequest) (*image.Image, error) {
+	tileGeom, err := geom.BoundsGeom(
+		0.0,
+		r.TileWidth,
+		0.0,
+		r.TileHeight,
+	)
+	if err != nil {
+		return nil, err
+	}
+	r.TileGeom = tileGeom
+
+	layerOrder, layerData, err := layerdata.GetLayerData(db, r)
+	if err != nil {
+		return nil, err
+	}
+
+	return makeimage.DrawImage(r, layerOrder, layerData)
+}
+
+func writeTile(tile *image.Image, tileRequest types.TileRequest, w http.ResponseWriter, r *http.Request) {
 	var quality int
-
-	_, err := validateRequest(&tileRequest, r)
-	if err != nil {
-		writeError(w, http.StatusBadRequest, err)
-		return
-	}
-
-	tile, err := makeTile(db, tileRequest)
-	if err != nil {
-		writeError(w, http.StatusInternalServerError, err)
-		return
-	}
 
 	buffer := new(bytes.Buffer)
 
@@ -77,7 +84,7 @@ func tileHandler(w http.ResponseWriter, r *http.Request) {
 		}
 
 		// Write the image into the buffer
-		err = jpeg.Encode(buffer, *tile, &opt)
+		err := jpeg.Encode(buffer, *tile, &opt)
 		if err != nil {
 			msg := fmt.Sprintf("unable to encode image %v", err)
 			logger.Log(
@@ -113,25 +120,4 @@ func writeError(w http.ResponseWriter, rcode int, err error) {
 	w.Header().Set("Content-Length", strconv.Itoa(len(body)))
 
 	w.Write(body) //nolint:errcheck
-}
-
-func makeTile(db database.StorageEngine, r types.TileRequest) (*image.Image, error) {
-	tileGeom, err := geom.BoundsGeom(
-		0.0,
-		r.TileWidth,
-		0.0,
-		r.TileHeight,
-	)
-	if err != nil {
-		return nil, err
-	}
-
-	r.TileGeom = tileGeom
-
-	layerOrder, layerData, err := layerdata.GetLayerData(db, r)
-	if err != nil {
-		return nil, err
-	}
-
-	return makeimage.DrawImage(r, layerOrder, layerData)
 }

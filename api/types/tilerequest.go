@@ -37,7 +37,7 @@ func (r TileRequest) Envelope() *geos.Bounds {
 	tileWidth, tileHeight := r.Dims()
 	tileOrigin := r.Origin()
 
-	return geos.NewBounds(tileOrigin.LatLon.Lat, tileOrigin.LatLon.Lon, tileOrigin.LatLon.Lat+tileWidth, tileOrigin.LatLon.Lon+tileHeight)
+	return geos.NewBounds(tileOrigin.X, tileOrigin.Y, tileOrigin.X+tileWidth, tileOrigin.Y+tileHeight)
 }
 
 func (r TileRequest) Dims() (float64, float64) {
@@ -77,15 +77,13 @@ func (r TileRequest) Dims() (float64, float64) {
 	return tileWidth, tileHeight
 }
 
-func (r TileRequest) Origin() nationalgrid.OSGB36LatLon {
+func (r TileRequest) Origin() nationalgrid.EastNorth {
 	tileWidth, tileHeight := r.Dims()
 	tileCenter := r.Location.ToOSGB36()
 
-	return nationalgrid.OSGB36LatLon{
-		LatLon: nationalgrid.LatLon{
-			Lat: tileCenter.LatLon.Lat - tileWidth/2,
-			Lon: tileCenter.LatLon.Lon - tileHeight/2,
-		},
+	return nationalgrid.EastNorth{
+		X: tileCenter.X - tileWidth/2,
+		Y: tileCenter.Y - tileHeight/2,
 	}
 }
 
@@ -94,11 +92,11 @@ func (r TileRequest) BoundsCoords() ([]float64, []float64) {
 	tileOrigin := r.Origin()
 
 	return []float64{
-			tileOrigin.LatLon.Lat,
-			tileOrigin.LatLon.Lon + tileHeight,
+			tileOrigin.X,
+			tileOrigin.Y + tileHeight,
 		}, []float64{
-			tileOrigin.LatLon.Lat + tileWidth,
-			tileOrigin.LatLon.Lon,
+			tileOrigin.X + tileWidth,
+			tileOrigin.Y,
 		}
 }
 
@@ -107,10 +105,10 @@ func (r TileRequest) BoundsGeom() (*geos.Geom, error) {
 	tileOrigin := r.Origin()
 
 	g, err := geom.BoundsGeom(
-		tileOrigin.LatLon.Lat,
-		tileOrigin.LatLon.Lat+tileWidth,
-		tileOrigin.LatLon.Lon,
-		tileOrigin.LatLon.Lon+tileHeight,
+		tileOrigin.X,
+		tileOrigin.X+tileWidth,
+		tileOrigin.Y,
+		tileOrigin.Y+tileHeight,
 	)
 	if err != nil {
 		return &geos.Geom{}, err
